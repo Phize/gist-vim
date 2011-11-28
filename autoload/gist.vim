@@ -1,7 +1,7 @@
 "=============================================================================
 " File: gist.vim
 " Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-" Last Change: 22-Nov-2011.
+" Last Change: 28-Nov-2011.
 " Version: 5.7
 " WebPage: http://github.com/mattn/gist-vim
 " License: BSD
@@ -369,7 +369,6 @@ function! s:GistListAction()
     return
   endif
   if line =~# '^more\.\.\.$'
-    delete
     call s:GistList(b:user, b:token, b:gistls, b:page+1)
     return
   endif
