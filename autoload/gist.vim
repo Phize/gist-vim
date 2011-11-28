@@ -264,6 +264,7 @@ function! s:GistList(user, token, gistls, page)
   let b:page = a:page
   setlocal buftype=nofile bufhidden=hide noswapfile
   setlocal nomodified
+  setlocal nomodifiable
   syntax match SpecialKey /^gist:/he=e-1
   nnoremap <silent> <buffer> <cr> :call <SID>GistListAction()<cr>
 
